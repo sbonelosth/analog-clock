@@ -1,0 +1,99 @@
+@font-face { font-family : orbitron; src : url('../fonts/orbitron/Orbitron-Black.ttf'); }
+@font-face { font-family : spincycle; src : url('../fonts/spincycle/spincycle_ot.otf'); }
+	
+body {
+	background : #171717;
+	color : #E91E63;
+	padding-top : 80px;
+}
+
+.analog-content {
+	display : flex;
+	flex-direction : column;
+	justify-content : space-between;
+	align-items : center;
+	width : 100%; height : 100%;
+	font-size : 20px;
+	font-family : spincycle;
+	font-weight : bold;
+	text-shadow : 1px 1px 2px #000;
+}
+
+.analog-clock-container {
+	width : 250px; height : 250px;
+	background : #202125;
+	border : 20px solid #000;
+	border-radius : 50%;
+	box-shadow : 0 0 4px #000;
+	padding : 5px 5px 0 5px;
+	transform : scale(0.8);
+}
+
+.quarters,
+	.fifths,
+		.twentieths,
+			.twenty-fifths,
+				.tenths {
+	display : flex;
+	flex-direction : row;
+	justify-content : space-between;
+	width : 100%;
+}
+
+
+.twentieths, .tenths { width : 84%; }
+
+.twenty-fifths, .fifths { width : 54%; }
+
+.fifths { transform : translateY(-22px); }
+
+.twenty-fifths { transform : translateY(22px); }
+
+.tenths { transform : translateY(-15px); }
+
+.twentieths { transform : translateY(15px); }
+
+.origin {
+	width : 30px; height : 30px;
+	background : black;
+	border-radius : 50%;
+	transform : translateY(-3px);
+	box-shadow : 0 0 5px #000;
+	z-index : 30;
+}
+
+.seconds-stick {
+	position : absolute;
+	top : 125px; left : 75px;
+	width : 110px; height : 2px;
+	background : #E91E63;
+	animation : spin 0s infinite;
+	box-shadow : -1px -1px 2px #000;
+	z-index : 20;
+}
+
+.minutes-stick {
+	position : absolute;
+	top : 125px; left : 86px;
+	width : 90px; height : 4px;
+	border-radius : 4px;
+	background : #666573;
+	animation : spin 0s infinite;
+	box-shadow : -1px -1px 2px #000;
+	z-index : 10;
+}
+
+.hours-stick {
+	position : absolute;
+	top : 125px; left : 102px;
+	width : 60px; height : 6px;
+	border-radius : 6px;
+	background : #9CA0A8;
+	animation : spin 0s infinite;
+	box-shadow : -1px -1px 2px #000;
+}
+
+@keyframes spin {
+	0% { transform : rotate(-90deg) translate(40%, 0); }
+	100% { transform : rotate(270deg) translate(40%, 0); }
+}
