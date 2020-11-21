@@ -13,9 +13,8 @@ body {
 	justify-content : space-between;
 	align-items : center;
 	width : 100%; height : 100%;
-	font-size : 20px;
+	font-size : 15px;
 	font-family : spincycle;
-	font-weight : bold;
 	text-shadow : 1px 1px 2px #000;
 }
 
@@ -40,6 +39,10 @@ body {
 	width : 100%;
 }
 
+.quarters, .twelve, .six { 
+	font-weight : bold; 
+	font-size : 23; 
+}
 
 .twentieths, .tenths { width : 84%; }
 
@@ -67,7 +70,7 @@ body {
 	top : 125px; left : 75px;
 	width : 110px; height : 2px;
 	background : #E91E63;
-	animation : spin 0s infinite;
+	animation : spin 0s;
 	box-shadow : -1px -1px 2px #000;
 	z-index : 20;
 }
@@ -78,14 +81,14 @@ body {
 	width : 90px; height : 4px;
 	border-radius : 4px;
 	background : #666573;
-	animation : spin 0s infinite;
+	animation : spin 0s;
 	box-shadow : -1px -1px 2px #000;
 	z-index : 10;
 }
 
 .hours-stick {
 	position : absolute;
-	top : 125px; left : 102px;
+	top : 125px; left : 100px;
 	width : 60px; height : 6px;
 	border-radius : 6px;
 	background : #9CA0A8;
